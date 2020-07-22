@@ -1,0 +1,105 @@
+<html>
+
+<head>
+<title>Epam Login </title>
+
+
+<script>  
+function validateemail()  
+{  
+var x=document.myform.email.value;  
+var atposition=x.indexOf("@");  
+var dotposition=x.lastIndexOf(".");  
+if (atposition<1 || dotposition<atposition+2 || dotposition+2>=x.length){  
+  alert("Please enter a valid e-mail address \n atpostion:"+atposition+"\n dotposition:"+dotposition);  
+  return false;  
+  }  
+} 
+
+
+function matchpass(){
+var firstpassword=document.f1.password.value;
+//var secondpassword=document.f1.password2.value;
+
+if(firstpassword==""){
+alert("Please enter a valid password");
+return false;
+}
+else{
+//alert("password must be same!");
+return false;
+}
+} 
+</script> 
+
+
+</head>
+
+<body>
+
+<div style="height:600px; width:40%; outline-style:solid; margin-left:30%">
+
+<div style="height:50px;width:100%;margin-top:5%;background-color:#5E82C3">
+
+<div style="height:40px;width:30%;float:left; margin-left:30%">
+<h2 style="color:white; text-align:center">Epam Login</h2>
+</div>  <!--Sign in div close -->
+
+<div style="height:40px;width:10%;float:left; margin-left:25%">
+<img src="https://www.google.com/url?sa=i&source=imgres&cd=&cad=rja&uact=8&ved=2ahUKEwiM--qD0ODqAhWGwjgGHTG9AjQQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.123rf.com%2Fphoto_73540786_stock-vector-cancel-close-icon-outline-horseshoe-icon-for-website-design-logo.html&psig=AOvVaw0LaxHF-YqiqK-jYjiHIeyA&ust=1595499254167544" style="height:30px;width:100%;margin-top:30%">
+</div>   <!--close logo div close -->
+
+</div> <!--Top div -->
+
+
+
+<div style="height:50px;width:95%;float:left;margin-top:5%; margin-left:2%; outline-style:solid; text-align:center; font-size:18px">
+<form name="myform"  method="post" action="demo.html" onsubmit="return validateemail();">  
+Email: <input style="height:35px; width:60%; margin-top:2%" type="text" name="email">
+<input type="submit" value="Enter"> 
+</form>
+</div>  <!--Email div -->
+
+<div style="height:50px;width:95%;float:left;margin-left:2%;margin-top:4%;outline-style:solid; font-size:18px; text-align:center">
+<form name="f1" action="demo.html" onsubmit="return matchpass()">
+Password:<input style="height:35px; width:60%; margin-top:2%" type="password" name="password" />
+<input type="submit" value="Enter">
+</form>
+</div>  <!-- Password -->
+
+<div style="height:40px;width:95%; text-align:center; float:left; margin-left:2%;margin-top:4%;outline-style:solid;background-color:#5E82C3">
+<button style="background-color:#5E82C3; height:40px; width:100%; font-weight:bold; font-size:25px"> Sign In </button>
+</div>  <!-- Sign in div -->
+
+<div style="height:30px;width:95%;float:left;margin-left:4%;margin-top:4%;">
+<table style="width:100%;">
+<tr>
+<th style="text-align:left"> Forgot password? </th>
+<th style="margin-left:30%"> Register!</th>
+</tr>
+</table>
+</div>  <!--Forgot Paassword div -->
+
+<div style="height:30px;width:95%;float:left;margin-left:8%; margin-top:1%">
+<h3> _______________________ OR ______________________</h3>
+
+</div>  <!-- OR -->
+
+
+<div style="height:40px;width:95%;float:left;margin-left:2%;margin-top:5%;background-color:#0011a7; text-align:center">
+<button style="background-color:#0011a7; height:40px; width:100%; font-weight:bold; font-size:25px">Facebook</Button>
+</div>  <!-- FB -->
+
+
+<div style="height:40px;width:95%;float:left;margin-left:2%;margin-top:5%;background-color:#e90003; text-align:center">
+<button style="background-color:#e90003; height:40px; width:100%; font-weight:bold; font-size:25px">Google</Button>
+</div>  <!-- Google -->
+
+<div style="height:40px;width:95%;float:left;margin-left:2%;margin-top:5%;background-color:#ffff2b; text-align:center">
+<button style="background-color:#ffff2b; height:40px; width:100%; font-weight:bold; font-size:25px">Epam Login</Button>
+</div>  <!-- Epam Login -->
+
+</div>
+</body>
+
+</html>
